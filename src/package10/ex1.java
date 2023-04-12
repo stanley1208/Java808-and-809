@@ -1,0 +1,40 @@
+package package10;
+
+import java.util.concurrent.CyclicBarrier;
+
+public class ex1 {
+
+	public static void main(String[] args) {
+		Master master=new Master();
+		CyclicBarrier cb=new CyclicBarrier(1,master);
+		Worker worker=new Worker(cb);
+		worker.start();
+
+	}
+
+}
+
+class Worker extends Thread{
+	CyclicBarrier cb;
+	
+	public Worker(CyclicBarrier cb) {
+		this.cb=cb;
+		
+	}
+	
+	public void run() {
+		try {
+			cb.await();
+			System.out.println("Worker...");
+		} catch (Exception e) {
+			
+		}
+	}
+}
+
+class Master implements Runnable{
+	
+	public void run() {
+		System.out.println("Master...");
+	}
+}
