@@ -9,7 +9,7 @@ import java.util.stream.Stream;
 public class ex11 {
 
 	public static void main(String[] args) {
-		List<String>str=Arrays.asList("my","is","your","pen");
+		List<String>str=Arrays.asList("my","pen","is","your","pen");
 		Predicate<String>test=s->{
 			int i=0;
 			boolean result=s.contains("pen");
