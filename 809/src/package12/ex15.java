@@ -17,6 +17,8 @@ public class ex15 {
 				.map(n->n*2)
 				.peek(System.out::print)
 				.count();
+		
+		
 	}
 
 }

@@ -14,17 +14,15 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 
-public class ex29 {
+public class ex33 {
 
 	public static void main(String[] args) throws IOException {
-		List<String>li=Arrays.asList("Java","J2EE","J2ME","JSTL","JSP","Oracle DB");
-		Predicate<String>val=p->p.contains("J");
-		List<String>neLi=li.stream()
-				.filter(x->x.length()>3)
-				.filter(val)
-				.collect(Collectors.toList());
-				
-		System.out.println(neLi);
+		List<Integer>list1=Arrays.asList(10,20);
+		List<Integer>list2=Arrays.asList(15,30);
+		
+		Stream.of(list1,list2)
+		.flatMap(list->list.stream())
+		.forEach(s->System.out.print(s+" "));
 	}
 }
 
