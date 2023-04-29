@@ -10,6 +10,7 @@ public class ex10 {
 		String product="Pen";
 		product.toLowerCase();
 		product.concat(" BOX:".toLowerCase());
+		
 		System.out.print(product.substring(4,6));// StringIndexOutOfBoundsException
 	}
 

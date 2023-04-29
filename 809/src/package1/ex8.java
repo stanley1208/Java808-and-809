@@ -15,9 +15,9 @@ public class ex8 {
 		Y myY=new Y();
 		X myX=myY;// new Y();
 		Z myZ=myX;// new Y();
-		System.out.print(myX);
-		System.out.print((Y)myX);
-		System.out.print(myZ);
+		System.out.println(myX);
+		System.out.println((Y)myX);
+		System.out.println(myZ);
 	}
 
 }

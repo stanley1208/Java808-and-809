@@ -13,7 +13,7 @@ class Customer{
 	}
 	
 	static {
-		count=2;
+		count=0;
 	}
 	
 	public static int getCount() {
