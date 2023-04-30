@@ -12,10 +12,10 @@ public class ex19{
 	
 	
 	public static void main(String[] args) {
-		char x=8;
+		char x=33;
 		int z='8';
-		System.out.println(x);
-		System.out.println(z);
+//		System.out.println(x);
+//		System.out.println(z);
 		System.out.println(doMsg(x));
 		System.out.println(doMsg(z));
 }
