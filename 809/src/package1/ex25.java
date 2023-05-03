@@ -14,7 +14,7 @@ public class ex25 {
 	}
 	
 	public static void main(String[] args) {
-		//System.out.println("three");
+		System.out.println("three");
 		new ex25().main();
 		main("aaa");
 		Object[] x = new Object[3];
