@@ -3,8 +3,8 @@ package package2;
 public class ex1 {
 
 	public static void main(String[] args) {
-		USCurrency usCoin=USCurrency.QUARTER;
-		System.out.println(USCurrency.QUARTER.getValue());
+		USCurrency usCoin=USCurrency.DIME;
+		System.out.println(USCurrency.DIME.getValue());
 
 	}
 
@@ -17,7 +17,7 @@ enum USCurrency{
 	QUARTER(25);
 	
 	private int value;
-	USCurrency(int value){
+	private USCurrency(int value){
 		this.value=value;
 	}
 	

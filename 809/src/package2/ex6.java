@@ -7,7 +7,7 @@ public class ex6 {
 		ex6 sc=new ex6();
 		sc=asc;
 		System.out.println("sc: "+sc.getClass());
-		System.out.println("sc: "+asc.getClass());
+		System.out.println("asc: "+asc.getClass());
 	}
 
 }

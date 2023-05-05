@@ -11,13 +11,13 @@ public class ex2 {
 
 }
 
-class Book{
+class BookNew{
 	private String read(String bname) {
 		return "Read"+bname;
 	}
 }
 
-class EBook extends Book{
+class EBook extends BookNew{
 	public String read(String url) {
 		return "View"+url;
 	}
