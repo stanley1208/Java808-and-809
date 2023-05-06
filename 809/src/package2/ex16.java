@@ -1,13 +1,14 @@
 package package2;
 
-public abstract class ex16 extends Shape{
+public class ex16 extends Shape{
 	
 	
 	public static void main(String[] args) {
 		
 		
 	}
-
+	private int radius;
+	
 	@Override
 	public void draw() {
 		// TODO Auto-generated method stub

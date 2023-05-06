@@ -20,7 +20,7 @@ public class ex17 {
 				
 			}
 		}catch(Exception e) {
-			System.out.println("Arrat out of limits");
+			System.out.println("Array out of limits");
 		}
 		
 	}

@@ -3,6 +3,8 @@ package package2;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.omg.CORBA.PUBLIC_MEMBER;
+
 public class ex19 {
 	
 	public static void main(String[] args) {
@@ -18,9 +20,9 @@ class Vehicle1{
 }
 
 class Product{
-	interface Moveable{void move();}
+	interface Moveable{	void move();}
 	Moveable mProduct=new Moveable() {
-		public void move(){};
+		public void move() {};
 	};
 }
 
@@ -33,8 +35,9 @@ class Block{
 }
 
 class Computer{
-	private Card sCard=new SoundCard();
+	
 	private abstract class Card{};
 	public class SoundCard extends Card{}
+	private Card sCard=new SoundCard();
 }
 

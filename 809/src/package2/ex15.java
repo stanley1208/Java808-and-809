@@ -28,6 +28,7 @@ interface Y{
 //class C extends A implements X{
 //	
 //}
-class C extends B implements X,Y{
-	
-}
+//class C extends B implements X,Y{
+//	
+//}
+

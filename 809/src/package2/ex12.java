@@ -7,12 +7,12 @@ public class ex12 {
 		for(int i:array) {
 			System.out.print(i);
 		}
-//		for(int i=0;i<1;) {
-//			System.out.print(i);
-//		}
-//		for(;;) {
-//			
-//		}
+		for(int i=0;i<1;) {
+			System.out.print(i);
+		}
+		for(;;) {
+			
+		}
 	}
 
 }

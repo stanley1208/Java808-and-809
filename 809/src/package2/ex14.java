@@ -5,7 +5,7 @@ public class ex14 {
 	
 	public void doCheck(int number) {
 		if(number%2==0) {
-			//break;
+//			break;
 		}else {
 			for(int i=0;i<number;i++) {
 				sum+=i;
