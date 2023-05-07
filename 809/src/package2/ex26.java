@@ -14,18 +14,16 @@ public class ex26 {
 	}
 }
 
-enum Course{
-	JAVA(100),
-	J2ME(150);
-	
-	private int cost;
-	Course(int c){
-		this.cost=c;
-	}
-	int getCost() {
-		return cost;
-	}
-}
+enum Course { JAVA(100),J2ME(150);
+    private int cost;
+    Course(int c) {
+    	this.cost=c;        
+    }
+    int getCost(){
+     	return cost;
+    }
+ 
+ }
 
 
 

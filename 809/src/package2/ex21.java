@@ -22,11 +22,11 @@ class Cake1{
 class Shop1{
 	private Cake1 c=new Cake1();
 	private final double discount=0.25;
-	public void makeRedy() {c.bake(10, 120);}
+	public void makeReady() {c.bake(10, 120);}
 }
 
 class Bread1 extends Cake1{
-	///public void bake(int minutes,int temperature) {}
+//	public void bake(int minutes,int temperature) {}
 	public void addToppings() {}
 }
 
