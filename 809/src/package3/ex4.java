@@ -13,7 +13,7 @@ public class ex4 {
 }
 
 
-// 要實作 Comparable
+// 閬祕雿� Comparable
 class Vehicle implements Comparable<Vehicle>{
 	int vno;
 	String name;
@@ -30,7 +30,7 @@ class Vehicle implements Comparable<Vehicle>{
 	@Override
 	public int compareTo(Vehicle o) {
 		
-		return vno-o.vno;
+		return this.vno-o.vno;
 	}
 	
 	
