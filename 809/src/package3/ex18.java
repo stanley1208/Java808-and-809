@@ -11,11 +11,12 @@ public class ex18 {
 	
 	
 	public static void main(String[] args) {
-			List<Integer>codes=Arrays.asList(10,20);
-			UnaryOperator<Integer>uo=s->s+10;
-			codes.replaceAll(uo);
-			codes.forEach(c->System.out.println(c));
-		}
+		List<Integer> codes=Arrays.asList(10,20);
+		UnaryOperator<Integer> uo=s->s+10;
+		codes.replaceAll(uo);
+		codes.forEach(c->System.out.println(c));
+		
+}
 	
 	
 

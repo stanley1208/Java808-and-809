@@ -9,28 +9,31 @@ public class ex15 {
 	
 	
 	public static void main(String[] args) {
-			List<Block>blocks=new ArrayList<>();
-			blocks.add(new Block(10,"Green"));
-			blocks.add(new Block(7,"Red"));
-			blocks.add(new Block(12,"Blue"));
-			Collections.sort(blocks, new ColorSort());
+		List<Block> blocks=new ArrayList<>();
+		blocks.add(new Block(10,"Green"));
+		blocks.add(new Block(7,"Red"));
+		blocks.add(new Block(12,"Blue"));
+		Collections.sort(blocks,new ColorSorter());
+		System.out.print(blocks);
 		}
 	
 	
 
 }
 
-class Block{
+class Block {
 	String color;
 	int size;
-	Block(int size,String color){
+	Block(int size,String color) {
 		this.size=size;
-		this.color=color;
+		this.color=color;	
 	}
-	
+	public String toString() {
+        return size + ":" + color;
+    }
 }
 
-class ColorSort implements Comparator<Block>{
+class ColorSorter implements Comparator<Block>{
 
 	
 	public int compare(Block o1, Block o2) {

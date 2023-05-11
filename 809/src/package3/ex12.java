@@ -5,9 +5,8 @@ public class ex12 {
 	
 	
 	public static void main(String[] args) {
-			ProductCode<Number,Integer>c1=new ProductCode<Number,Integer>();
-//			ProductCode<Number,String>c2=new ProductCode<Number,String>();
-
+		ProductCode<Number, Integer> c1=new ProductCode<Number, Integer>();//c1 instantiation
+//		 ProductCode<Number, String> c2=new ProductCode<Number, String>();//c2 instantiation
 		}
 }
 
@@ -16,10 +15,10 @@ class ProductCode<T,S extends T>{
 	S c2;
 }
 
-class ProductCode2<T,S>{
-	T c1;
-	S c2;
-}
+//class ProductCode2<T,S>{
+//	T c1;
+//	S c2;
+//}
 
 //class ProductCode3<T,S super T>{
 //	T c1;

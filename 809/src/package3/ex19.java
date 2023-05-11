@@ -17,8 +17,8 @@ public class ex19 {
 			System.out.println(nums);
 			Integer i1=nums.remove();
 			Integer i2=nums.pop();
-			System.out.println(i1);
-			System.out.println(i2);
+			System.out.println(i1+":"+i2);
+//			System.out.println(i2);
 		}
 	
 	
