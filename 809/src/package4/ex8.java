@@ -23,6 +23,8 @@ public class ex8 {
 				// TODO Auto-generated method stub
 				return str.toString().length()>5 && str.toString().length()<10;
 			}
+
+			
 			
 		}.test("Hello");
 	}

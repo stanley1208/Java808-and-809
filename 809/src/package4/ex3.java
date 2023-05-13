@@ -13,11 +13,13 @@ interface Doable{
 }
 
 abstract class Task implements Doable{
-	public void doSomethingElse(String s) {
+	public void doSomething(String s) {
 		
 	}
 		
 }
+
+
 
 class Do implements Doable{
 	
@@ -34,3 +36,6 @@ class Do implements Doable{
 	}
 	
 }
+
+
+

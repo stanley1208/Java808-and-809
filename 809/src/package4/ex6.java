@@ -8,9 +8,10 @@ import java.util.function.Function;
 public class ex6 {
 
 	public static void main(String[] args) {
-		List<Integer>li=Arrays.asList(10,20,30);
-		Function<Integer,Integer>fn=f1->f1*2;
-		Consumer<Integer>conVal=s->System.out.print("Val:"+s+" ");
+		List<Integer> li=Arrays.asList(10,20,30);
+		Function<Integer,Integer> fn=f1->f1*2;
+
+		Consumer<Integer> conVal=s->System.out.print("Val:"+s+" ");
 		li.stream().map(fn).forEach(conVal);
 	}
 

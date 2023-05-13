@@ -5,6 +5,7 @@ public class ex5 {
 	public static void main(String[] args) {
 		
 //		Rideable x=new Car("abc");
+		
 		Rideable x1=(String name)->new Car(name);
 		Rideable x2=name->new Car(name);
 		Rideable x3=Car::new;
@@ -17,20 +18,17 @@ public class ex5 {
 
 }
 
-interface Rideable{
-	Car getCar(String name);
-	default void abc() {
-	}
+//Rideable can only have one method
+interface Rideable {
+	 
+    Car getCar(String name);
 }
 
 class Car{
-	
-	private String name;
-	
-	public Car(String name) {
-		this.name=name;
-	}
-
-	
-	
+	 
+    private String name;
+ 
+    public Car(String name) {
+        this.name = name;
+    }
 }
