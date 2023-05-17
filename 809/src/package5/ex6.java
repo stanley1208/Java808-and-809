@@ -13,7 +13,7 @@ public class ex6 {
 	static Connection newConnection=null;
 	
 	public static Connection getConnection() throws SQLException{
-		try(Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","1234")) {
+		try(Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306","root","12345678")) {
 			newConnection=con;
 		}
 		return newConnection;
@@ -22,7 +22,7 @@ public class ex6 {
 	public static void main(String[] args) throws SQLException{
 		getConnection();
 		System.out.println(newConnection); // com.mysql.cj.jdbc.ConnectionImpl@26794848
-		Statement st=newConnection.createStatement(); // 產生後又斷線
+		Statement st=newConnection.createStatement(); // �����蝺�
 		st.executeUpdate("INSERT INTO student VALUES (102,'kELVIN')");
 	}
 

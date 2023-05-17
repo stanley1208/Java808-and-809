@@ -9,7 +9,7 @@ import org.junit.Test;
 public class ex5 {
 
 	static void doStuff() throws ArithmeticException, NumberFormatException, Exception{
-		if(Math.random()>-1) throw new Exception("Try Agaiin");
+		if(Math.random()>-1) throw new Exception("Try Again");
 	}
 	
 	public static void main(String[] args) {

@@ -8,25 +8,23 @@ import java.sql.Statement;
 
 public class ex7 {
 
-	public static void main(String[] args) throws Exception{
-		try(Folder f=new Folder()){
-			f.open();
-		}
-	}
+	public static void main(String[] args) throws Exception {
+        try (Folder f = new Folder()) {
+            f.open();
+        }
+    }
 
 }
 
-final class Folder implements AutoCloseable{
-	
-	public void open() {
-		System.out.println("Open");
+final class Folder implements AutoCloseable{ //line n1
+	 
+	public void close() throws Exception{
+	    System.out.print("Close");
 	}
-
-	@Override
-	public void close() throws Exception {
-		// TODO Auto-generated method stub
-		System.out.println("Close");
-	}
+ 
+    public void open() {
+        System.out.print("Open ");
+    }
 }
 
 

@@ -12,11 +12,10 @@ interface Doable{
 	public void doSomething(String s);
 }
 
-abstract class Task implements Doable{
-	public void doSomething(String s) {
-		
-	}
-		
+abstract class Task implements Doable {
+	 
+    public void doSomethingElse(String s) {
+    }
 }
 
 
