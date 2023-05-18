@@ -8,12 +8,13 @@ public class ex14 {
 }
 
 class Engine{
-	double fueLevel1;
-	Engine(int fueLevel1){
-		this.fueLevel1=fueLevel1;
+	double fuelLevel1;
+	Engine(int fuelLevel1){
+		this.fuelLevel1=fuelLevel1;
 	}
 	public void start() {
-		assert fueLevel1>0:"Impossible fuel";
+		assert fuelLevel1>0:"Impossible fuel";
+		
 		System.out.println("Started");
 	}
 	

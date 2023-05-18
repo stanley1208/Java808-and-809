@@ -7,6 +7,15 @@ public class ex12 {
 	}
 
 }
+/*
+Which two are Java Exception classes?
+A. SercurityException
+B. DuplicatePathException
+C. IllegalArgumentException
+D. TooManyArgumentsException
+
+
+*/
 
 // SecurityException
 
