@@ -8,9 +8,9 @@ import java.util.stream.Stream;
 public class ex2 {
 
 	public static void main(String[] args) {
-		Stream<Path>paths=Stream.of(Paths.get("C:/Users/88698/Desktop/data.docx"),
-				Paths.get("C:/Users/88698/Desktop/data.txt"),
-				Paths.get("C:/Users/88698/Desktop/data.xml"));
+		Stream<Path>paths=Stream.of(Paths.get("C:/Users/Desktop/data.docx"),
+				Paths.get("C:/Users/user/Desktop/data.txt"),
+				Paths.get("C:/Users/Desktop/data.xml"));
 		paths.filter(s->s.toString().endsWith("txt")).forEach(
 				s->{
 					try {

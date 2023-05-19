@@ -1,14 +1,9 @@
-package package6;
-
-
-
-
 import java.io.Console;
 
 
 
 
-public class ex5 {
+public class ex5txt {
 
 	public static void main(String[] args){
 		Console console=System.console();

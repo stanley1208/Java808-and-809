@@ -9,8 +9,10 @@ public class ex1 {
 		BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter GDP: ");
 		int GDP=Integer.parseInt(br.readLine());
+//		int GDP = br.read(); // ascii
 		
 		System.out.println(GDP);
+		
 	}
 
 }
