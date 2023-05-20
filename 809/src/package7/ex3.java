@@ -9,8 +9,9 @@ public class ex3 {
 
 	public static void main(String[] args) throws IOException {
 		Path p1=Paths.get("/Pics/MyPic.jpeg");
-		System.out.println(p1.getNameCount()+":"+p1.getName(1)+":"+p1.getFileName());
-		
+		System.out.println(p1.getNameCount()
+		        + ":" + p1.getName(1)
+		        + ":" + p1.getFileName());		
 	}
 
 }

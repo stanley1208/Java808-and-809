@@ -13,22 +13,20 @@ import java.util.Properties;
 public class ex10 {
 
 	public static void main(String[] args) throws IOException {
-		try {
-			List<String>content=Files.readAllLines(Paths.get("C:\\Users\\user\\Documents\\java\\employee.txt"));
-		content.stream().forEach(line->{
-			try {
-				Files.write(
+		try
+		{
+			List<String> content=Files.readAllLines(Paths.get("employee.txt"));
+			content.stream().forEach(line->{
+				try{
+					Files.write(
 						Paths.get("allemp.txt"),
 						line.getBytes(),
 						StandardOpenOption.APPEND
 						);
-			} catch (Exception e) {
-				System.out.println("Exception 1");
-			}
-		});
-		} catch (Exception e2) {
-			System.out.println("Exception 2");
-		}
+				}catch(IOException e){ System.out.println("Exception 1");}
+				
+				});
+		}catch(IOException e){ System.out.println("Exception 2");}
 		
 		
 	}

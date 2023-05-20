@@ -14,15 +14,15 @@ public class ex6 {
 	}
 
 	public void recDelete(String dirName) throws IOException{
-		File[] listOfFiles=new File(dirName).listFiles();
-		if (listOfFiles!=null && listOfFiles.length>0) {
-			for(File aFile:listOfFiles) {
-				if(aFile.isDirectory()) {
-					recDelete(aFile.getAbsolutePath());
-				}else if(aFile.getName().endsWith(".class")){
-					aFile.delete();
-				}
-			}
-		}
+		File[] listOfFiles = new File(dirName).listFiles();
+	    if (listOfFiles != null && listOfFiles.length > 0) {
+	        for (File aFile : listOfFiles) {
+	            if (aFile.isDirectory()) {
+	                recDelete(aFile.getAbsolutePath());
+	            } else if (aFile.getName().endsWith(".class")) {
+	                aFile.delete();
+	            }
+	        }
+	    }
 	}
 }
