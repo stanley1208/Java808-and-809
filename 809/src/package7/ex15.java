@@ -13,7 +13,7 @@ public class ex15 {
 
 	public static void main(String[] args) throws IOException {
 		Path source=Paths.get("C:/Users/user/Documents/java/december/log.txt");
-		Path destination=Paths.get("C:\\Users\\user\\Documents\\java\\c.txt");
+		Path destination=Paths.get("C:\\Users\\user\\Documents\\java");
 		Files.copy(source, destination);
 	}
 

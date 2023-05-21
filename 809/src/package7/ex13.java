@@ -11,7 +11,7 @@ import java.util.Properties;
 public class ex13 {
 
 	public static void main(String[] args) {
-		Path ip=Paths.get("C:","First.txt");
+		Path ip=Paths.get("/","First.txt");
 		System.out.println(ip);
 	}
 
