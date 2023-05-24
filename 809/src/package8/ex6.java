@@ -8,31 +8,26 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class ex6 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		final List<String>list=new CopyOnWriteArrayList<>();
+		final List<String> list=new CopyOnWriteArrayList<>();
 		final AtomicInteger ai=new AtomicInteger(0);
-		final CyclicBarrier barrier=new CyclicBarrier(2,new Runnable() {
-			
-			@Override
-			public void run() {
-				System.out.println(list);
-			}
+		final CyclicBarrier barrier=new CyclicBarrier(2,new Runnable(){
+			public void run(){ System.out.println(list);}
 		});
-		
-		Runnable r=new Runnable() {
-			
-			@Override
-			public void run() {
-				try {
+
+		Runnable r=new Runnable(){
+			public void run(){
+				try{
 					Thread.sleep(1000*ai.incrementAndGet());
 					list.add("X");
 					barrier.await();
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
+						
+				}catch(Exception ex){
+				
+				}	
 			}
 		};
-		
+
+
 		new Thread(r).start();
 		new Thread(r).start();
 		new Thread(r).start();

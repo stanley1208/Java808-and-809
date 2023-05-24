@@ -6,17 +6,16 @@ import java.util.concurrent.RecursiveAction;
 public class ex1 {
 
 	public static void main(String[] args) {
-		ForkJoinPool fjPool=new ForkJoinPool();
-		int data[]= {1,2,3,4,5,6,7,8,9,10};
+		ForkJoinPool fjPool = new ForkJoinPool();
+		int data[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 		fjPool.invoke(new Sum(data, 0, data.length));
-
 	}
 
 }
 
 class Sum extends RecursiveAction { //line n1
 	 
-    static final int THRESHOLD_SIZE =3;
+    static final int THRESHOLD_SIZE = 3;
     int stIndex, lstIndex;
     int[] data;
  
@@ -25,6 +24,8 @@ class Sum extends RecursiveAction { //line n1
         this.stIndex = start;
         this.lstIndex = end;
     }
+
+	
  
     protected void compute() {
         int sum = 0;
