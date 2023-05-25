@@ -17,8 +17,8 @@ public class ex7 {
 			conn=DriverManager.getConnection(dbURL,userName,passWord);
 			Statement st=conn.createStatement();
 			String query="DELETE FROM Student WHERE id=103";
-			System.out.println("Status:"+st.execute(query));
-		} catch (Exception e) {
+			System.out.println("Status: "+st.execute(query));
+			} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

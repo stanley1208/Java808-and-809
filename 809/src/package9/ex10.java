@@ -15,11 +15,12 @@ public class ex10 {
 		
 		Connection conn=DriverManager.getConnection(dbURL,userName,passWord);
 		 Statement st=conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_UPDATABLE);
+		 
 		 st.execute("SELECT * FROM student2");
 		 ResultSet rs=st.getResultSet();
 		 rs.absolute(3);
 //		 rs.moveToInsertRow();
-		 rs.updateInt(1, 113);
+		 rs.updateInt(1, 122);
 		 rs.updateString(2, "555");
 		 rs.updateRow();
 		 rs.refreshRow();

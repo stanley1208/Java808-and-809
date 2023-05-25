@@ -16,7 +16,7 @@ public class ex4 {
 		ResultSet rs=st.getResultSet();
 		while(rs.next()) {
 			if(rs.getInt(1)==112) {
-				rs.updateString(2, "Jack");
+				rs.updateString(2, "Stanley");
 				rs.updateRow();
 			}
 		}
