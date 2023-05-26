@@ -20,7 +20,7 @@ public class ex10 {
 		 ResultSet rs=st.getResultSet();
 		 rs.absolute(3);
 //		 rs.moveToInsertRow();
-		 rs.updateInt(1, 122);
+		 rs.updateInt(1, 111);
 		 rs.updateString(2, "555");
 		 rs.updateRow();
 		 rs.refreshRow();

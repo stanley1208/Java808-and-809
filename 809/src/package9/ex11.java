@@ -21,7 +21,7 @@ public class ex11 {
 			 System.out.println("Employee ID:"+rs.getInt("ID"));
 		} catch (Exception e) {
 			System.out.println("Error");
-			e.printStackTrace();
+			
 		}
 		
 		}
