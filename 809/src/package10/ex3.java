@@ -9,28 +9,25 @@ import java.util.concurrent.Future;
 public class ex3 {
 
 	public static void main(String[] args) throws Exception, ExecutionException {
-		ExecutorService es=Executors.newFixedThreadPool(4);
-		Future f1=es.submit(new CallerThread("Call"));
-		String str=f1.get().toString();
-		System.out.println(str);
+		ExecutorService es = Executors.newFixedThreadPool(4); //line n1
+	    Future f1 = es.submit(new CallerThread("Call"));
+	    String str = f1.get().toString();
+	    System.out.println(str);
 		
 		es.shutdown();
 	}
 
 }
 
-class CallerThread implements Callable<String>{
-	
-	String str;
-
-	public CallerThread(String s) {
-		this.str=s;
-	}
-	
-	public String call() throws Exception {
-		
-		return str.concat(" Call");
-	}
-	
-	
+class CallerThread implements Callable<String> {
+	 
+    String str;
+ 
+    public CallerThread(String s) {
+        this.str = s;
+    }
+ 
+    public String call() throws Exception {
+        return str.concat(" Call");
+    }
 }

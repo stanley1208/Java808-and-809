@@ -14,27 +14,26 @@ public class ex1 {
 
 }
 
-class Worker extends Thread{
-	CyclicBarrier cb;
-	
-	public Worker(CyclicBarrier cb) {
-		this.cb=cb;
-		
-	}
-	
-	public void run() {
-		try {
-			cb.await();
-			System.out.println("Worker...");
-		} catch (Exception e) {
-			
-		}
-	}
+class Worker extends Thread {
+	 
+    CyclicBarrier cb;
+ 
+    public Worker(CyclicBarrier cb) {
+        this.cb = cb;
+    }
+ 
+    public void run() {
+        try {
+            cb.await();
+            System.out.println("Worker...");
+        } catch (Exception ex) {
+        }
+    }
 }
-
-class Master implements Runnable{
-	
-	public void run() {
-		System.out.println("Master...");
-	}
+ 
+class Master implements Runnable { //line n1
+ 
+    public void run() {
+        System.out.println("Master...");
+    }
 }

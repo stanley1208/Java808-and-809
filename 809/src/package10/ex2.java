@@ -1,5 +1,6 @@
 package package10;
 
+import java.util.function.Consumer;
 import java.util.function.Supplier;
 
 public class ex2 {
@@ -11,8 +12,8 @@ public class ex2 {
 		
 	}
 	
-	static void fly(Supplier<Bird>bird) {
-		bird.get().fly();
+	static void fly (Supplier<Bird> bird) {
+	    bird.get().fly();
 	}
 	
 }

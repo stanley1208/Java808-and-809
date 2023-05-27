@@ -1,5 +1,6 @@
 package package10;
 
+import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -17,29 +18,25 @@ import java.util.stream.Stream;
 public class ex7 implements Runnable{
 
 	String fName;
-	
-	public ex7(String fName) {
-		this.fName=fName;
-	}
-	
-	public void run() {
-		System.out.println(fName);
-		
-	}
-	
-	public static void main(String[] args) throws Exception, ExecutionException {
-		ExecutorService executor=Executors.newCachedThreadPool();
-		Stream<Path>listOfFiles=Files.walk(Paths.get("C:/Users/user/Documents/java"));
-		listOfFiles.forEach(line->{
-			executor.execute(new ex7(line.getFileName().toString()));
-		});
-		System.out.println("hello");
-		System.out.println("hello");
-		System.out.println("hello");
-		executor.shutdown();
-		executor.awaitTermination(5, TimeUnit.DAYS);
-	}
-
+	 
+    public ex7(String fName) {
+        this.fName = fName;
+    }
+ 
+    public void run() {
+        System.out.println(fName);
+    }
+ 
+    public static void main(String[] args) throws IOException, InterruptedException {
+        ExecutorService executor = Executors.newCachedThreadPool();
+        Stream<Path> listOfFiles = Files.walk(Paths.get("C:\\Users\\user\\Documents\\abc"));
+        listOfFiles.forEach(line -> {
+            executor.execute(new ex7(line.getFileName().toString())); //line n1
+        });
+        System.out.println("hello");
+        executor.shutdown();
+        executor.awaitTermination(5, TimeUnit.DAYS); //line n2
+    }
 	
 
 }
