@@ -19,14 +19,14 @@ public class ex12 {
 	public static void main(String[] args) throws Exception, ExecutionException {
 		LocalTime now=LocalTime.now();
 		long timeToBreakfast=0;
-		
-		LocalTime office_start=LocalTime.of(7, 30);
-		if(office_start.isAfter(now)) {
+
+		LocalTime office_start=LocalTime.of(7,30);
+		if(office_start.isAfter(now)){
 			timeToBreakfast=now.until(office_start,MINUTES);
-		}else {
+		}else{
 			timeToBreakfast=now.until(office_start,HOURS);
 		}
-		
+
 		System.out.println(timeToBreakfast);
 	}
 

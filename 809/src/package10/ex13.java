@@ -14,10 +14,9 @@ import java.util.stream.IntStream;
 
 public class ex13 {
 
-	public void loadResourcesBundle() {
-		ResourceBundle resource=ResourceBundle.getBundle("Greetings",Locale.US);
-		System.out.println(resource.getObject("HELLO_MSG"));
-		System.out.println(resource.getObject("GOODBYE_MSG"));
+	public void loadResourcesBundle(){
+		ResourceBundle resource=ResourceBundle.getBundle("Messages",Locale.US);
+		System.out.println(resource.getObject("msg"));	
 	}
 	
 	public static void main(String[] args) throws Exception, ExecutionException {

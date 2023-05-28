@@ -16,14 +16,13 @@ import java.util.stream.IntStream;
 public class ex14 {
 
 	public static void main(String[] args) throws Exception, ExecutionException {
-		Locale currentLocale=new Locale.Builder().setRegion("FR").setLanguage("aa").build();
+		Locale currentLocale=new Locale.Builder().setRegion("FR").setLanguage("fr").build();
 		ResourceBundle messages=ResourceBundle.getBundle("MessagesBundle",currentLocale);
-	
-		Enumeration<String>names=messages.getKeys();
+		Enumeration<String> names=messages.getKeys();
 		while(names.hasMoreElements()) {
 			String key=names.nextElement();
 			String name=messages.getString(key);
-			System.out.println(key+":"+name);
+			System.out.println(key+"="+name);
 		}
 	}
 

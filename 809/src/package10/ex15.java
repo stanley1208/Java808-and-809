@@ -15,8 +15,8 @@ import java.util.stream.IntStream;
 public class ex15 {
 
 	public static void main(String[] args) throws Exception, ExecutionException {
-//		Locale currentLocale=new Locale.Builder().setRegion("FR").setLanguage("aa").build();
-		Locale currentLocale=new Locale("aa","FR");
+//		Locale currentLocale=new Locale.Builder().setRegion("DE").setLanguage("de").build();
+		Locale currentLocale=new Locale("de","DE");
 		ResourceBundle messages=ResourceBundle.getBundle("MessagesBundle",currentLocale);
 		System.out.println(messages.getString("inquiry"));
 	

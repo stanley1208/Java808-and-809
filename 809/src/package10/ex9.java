@@ -13,7 +13,7 @@ import java.util.stream.IntStream;
 public class ex9 {
 
 	public static void main(String[] args) throws Exception, ExecutionException {
-		BiFunction<Integer, Double, Double>val=(t1,t2)->t1+t2;
+		BiFunction<Integer, Double, Double> val = (t1, t2) -> t1 + t2; // line n1
 		System.out.println(val.apply(10, 10.5));
 	}
 
