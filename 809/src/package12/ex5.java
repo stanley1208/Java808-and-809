@@ -10,7 +10,7 @@ public class ex5 {
 	public static void main(String[] args) {
 		IntStream st=IntStream.of(1,2,3);
 		st.forEach(System.out::println);
-		st.forEach(System.out::println);
+//		st.forEach(System.out::println);
 	}
 
 }

@@ -12,42 +12,30 @@ import com.google.protobuf.Empty;
 public class ex4 {
 
 	public static void main(String[] args) {
-		List<emp> li=Arrays.asList(
-				new emp("Sam", 20),
-				new emp("John", 60),
-				new emp("Jim", 51)
-				);
-		
-		Predicate<emp>agVal=s->s.getEAge()>50;
-		
-		li=li.stream()
-				.filter(agVal)
-				.collect(Collectors.toList());
-		
-		Stream<String>names=li.stream()
-				.map(emp::getEName);
-		names.forEach(n->System.out.println(n));
-		
-
+		List<Emp> li = Arrays.asList(new Emp("Sam", 20), new Emp("John", 60), new Emp("Jim", 51));
+		Predicate<Emp> agVal = s -> s.getEAge() > 50; //line n1
+		li = li.stream().filter(agVal).collect(Collectors.toList());
+		Stream<String> names = li.stream().map(Emp::getEName); //line n2
+		names.forEach(n -> System.out.print(n + " "));
 	}
 
 }
 
-class emp{
-	
-	private String eName;
-	private Integer eAge;
-	
-	emp(String eN,Integer eA){
-		this.eAge=eA;
-		this.eName=eN;
-	}
-	
-	public Integer getEAge() {
-		return eAge;
-	}
-	
-	public String getEName() {
-		return eName;
-	}
+class Emp {
+	 
+    private String eName;
+    private Integer eAge;
+ 
+    Emp(String eN, Integer eA) {
+        this.eName = eN;
+        this.eAge = eA;
+    }
+ 
+    public Integer getEAge() {
+        return eAge;
+    }
+ 
+    public String getEName() {
+        return eName;
+    }
 }
