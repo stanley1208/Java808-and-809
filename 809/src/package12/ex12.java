@@ -11,34 +11,33 @@ import java.util.stream.Stream;
 public class ex12 {
 
 	public static void main(String[] args) {
-		List<emp2>emp=Arrays.asList(
-				new emp2("John", "Smith"),
-				new emp2("Peter", "Sam"),
-				new emp2("Thomas", "Wale")
-				);
+		List<Emp2> emp = Arrays.asList(
+		        new Emp2("John", "Smith"),
+		        new Emp2("Peter", "Sam"),
+		        new Emp2("Thomas", "Wale"));
 		emp.stream()
-		.sorted(Comparator.comparing(emp2::getfName).reversed().thenComparing(emp2::getlName))
-		.collect(Collectors.toList())
-		.forEach(t->System.out.println(t.getfName()+" "+t.getlName()));
+		.sorted(Comparator.comparing(Emp2::getfName).reversed().thenComparing(Emp2::getlName))		
+		.collect(Collectors.toList());
 			  
 	}
 
 }
 
-class emp2{
-	String fName;
-	String lName;
-	
-	public emp2(String fn,String ln) {
-		fName=fn;
-		lName=ln;
-	}
-	
-	public String getfName() {
-		return fName;
-	}
-	
-	public String getlName() {
-		return lName;
-	}
+class Emp2 {
+	 
+    String fName;
+    String lName;
+ 
+    public Emp2(String fn, String ln) {
+        fName = fn;
+        lName = ln;
+    }
+ 
+    public String getfName() {
+        return fName;
+    }
+ 
+    public String getlName() {
+        return lName;
+    }
 }
