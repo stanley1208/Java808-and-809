@@ -18,11 +18,11 @@ import java.util.stream.Stream;
 public class ex28 {
 
 	public static void main(String[] args) throws IOException {
-		List<String>qwords=Arrays.asList("why","what","when");
-		BinaryOperator<String>operator=(s1,s2)->s1.concat(s2);
+		List<String> qwords=Arrays.asList("why ", "what ", "when ");
+		BinaryOperator<String> operator=(s1,s2)->s1.concat(s2);// line n1
 		String sen=qwords.stream()
-				.reduce("word", operator);
-		System.out.print(sen);
+			.reduce("Word: ",operator);
+		System.out.println(sen);
 	}
 }
 

@@ -17,13 +17,10 @@ import java.util.stream.Stream;
 public class ex29 {
 
 	public static void main(String[] args) throws IOException {
-		List<String>li=Arrays.asList("Java","J2EE","J2ME","JSTL","JSP","Oracle DB");
-		Predicate<String>val=p->p.contains("J");
-		List<String>neLi=li.stream()
-				.filter(x->x.length()>3)
-				.filter(val)
-				.collect(Collectors.toList());
-				
+		List<String> li=Arrays.asList("Java","J2EE","J2ME","JSTL","JSP","Oracle DB");
+		Predicate<String> val=p->p.contains("J");
+		List<String> neLi=li.stream().filter(x->x.length()>3)
+			.filter(val).collect(Collectors.toList());
 		System.out.println(neLi);
 	}
 }

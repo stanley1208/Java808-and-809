@@ -13,38 +13,31 @@ import java.util.stream.Stream;
 public class ex24 {
 
 	public static void main(String[] args) {
-		List<Product2>li=Arrays.asList(
-				new Product2("TV", 1000),
-				new Product2("Ref", 2000)
-				);
-			Consumer<Product2>raise=e->e.setPrice(e.getPrice()+100);
-			li.forEach(raise);
-			li.stream().forEach(Product2::printVal);
+		List<ProductA> li=Arrays.asList(new ProductA("TV",1000), 
+										new ProductA("Refrigerator",2000));
+				Consumer<ProductA> raise=e->e.setPrice(e.getPrice()+100);
+				li.forEach(raise);
+				li.stream().forEach(ProductA::printVal);
 	}
 }
 
-class Product2{
-	
+class ProductA{
 	String name;
 	Integer price;
-	
-	public Product2(String name,Integer price) {
+	ProductA(String name,Integer price)
+	{
 		this.name=name;
-		this.price=price;
+		this.price=price;	
 	}
 	
-	public void printVal() {
-		System.out.print(name+" Price:"+price+" ");
-	}
-	public void setPrice(int price) {
-		this.price=price;
-	}
-	
+	public void printVal(){ System.out.print(name+" Price:"+price+" ");}
+	public void setPrice(int price){this.price=price;}
+
 	public Integer getPrice() {
 		return price;
 	}
+	
 }
-
 
 
 

@@ -17,8 +17,8 @@ import java.util.stream.Stream;
 public class ex27 {
 
 	public static void main(String[] args) throws IOException {
-		Stream<String>stream=Files.lines(Paths.get("C:\\Users\\user\\Documents\\GitHub\\Java809-and-809\\Java809\\ocp\\customers.txt"));
-		stream.forEach(c->System.out.print(c));
+		Stream<String>lines=Files.lines(Paths.get("C:\\Users\\user\\Documents\\GitHub\\Java809-and-809\\Java809\\ocp\\customers.txt"));
+		lines.forEach(c->System.out.print(c));
 	}
 }
 
