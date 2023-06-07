@@ -21,8 +21,8 @@ public class ex33 {
 		List<Integer>list2=Arrays.asList(15,30);
 		
 		Stream.of(list1,list2)
-		.flatMap(list->list.stream())
-		.forEach(s->System.out.print(s+" "));
+        .flatMap(list->list.stream())
+        .forEach(s->System.out.print(s+" "));
 	}
 }
 

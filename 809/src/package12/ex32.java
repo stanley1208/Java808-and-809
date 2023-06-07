@@ -19,38 +19,28 @@ import org.w3c.dom.NameList;
 public class ex32 {
 
 	public static void main(String[] args) throws IOException {
-		List<Person2>sts=Arrays.asList(
-				new Person2("Jack", 30),
-				new Person2("Mike Hill", 21),
-				new Person2("Thomas Hill", 24)
-				);
-		Stream<Person2>resList=sts.stream()
-								.filter(s->s.getAge()>=25);
-		long count=resList
-				.filter(s->s.getName().contains("Hill"))
-				.count();
-		
-		System.out.println(count);
+		List<Person2> sts=Arrays.asList(
+				new Person2("Jack",30),
+				new Person2("Mike Hill",21),
+				new Person2("Thomas Hill",24));
+			Stream<Person2> resList=sts.stream().filter(s->s.getAge()>=25);  // Line n1
+			long count=resList.filter(s->s.getName().contains("Hill")).count();
+			System.out.print(count);
 	}
 }
 
-class Person2{
+class Person2 {
 	String name;
 	int age;
-	public Person2(String name,int age) {
+	public Person2(String name,int age){
 		this.name=name;
-		this.age=age;
+		this.age=age;	
 	}
 	
-	public String getName() {
-		return name;
-	}
-	
-	public int getAge() {
-		return age;
-	}
-}
+	public String getName(){ return name;}
+	public int getAge() { return age;}
 
+}
 
 
 

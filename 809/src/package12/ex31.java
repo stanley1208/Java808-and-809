@@ -17,11 +17,12 @@ import java.util.stream.Stream;
 public class ex31 {
 
 	public static void main(String[] args) throws IOException {
-		List<String> vaList=Arrays.asList("","George","John","Jim");
-		Long newVal=vaList.stream()
-							.filter(x->!x.isEmpty())
-							.count();
-		System.out.println(newVal);
+		List<String> vaList=Arrays.asList("","George","","John","Jim");
+		Long newVal=vaList.stream()     // line n1
+		         .filter(x->!x.isEmpty())
+		         .count();                // line n2
+		         
+		System.out.print(newVal);
 	}
 }
 
