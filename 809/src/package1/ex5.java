@@ -10,17 +10,17 @@ public class ex5 {
 	
 
 }
+
 class Book1 {
 	 
     int id;
     String name;
  
-
     public Book1(int id, String name) {
-    this.id = id;
-    this.name = name;
-}
-
+        this.id = id;
+        this.name = name;
+    }
+ 
     public boolean equals(Object obj) { //line n1
         boolean output = false;
         Book1 b = (Book1) obj;
