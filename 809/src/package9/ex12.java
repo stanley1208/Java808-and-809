@@ -19,9 +19,9 @@ public class ex12 {
 		Connection conn=null;
 		try {
 			Properties prop=new Properties();
-			prop.put("user", userName);
-			prop.put("password", passWord);
-			conn=DriverManager.getConnection(dbURL,prop);
+			   prop.put("user",userName);
+			   prop.put("password",passWord);
+			   conn=DriverManager.getConnection(dbURL,prop);
 			if(conn!=null) {
 				System.out.println("Connection Established!");
 			}

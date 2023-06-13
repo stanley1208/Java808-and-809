@@ -17,10 +17,10 @@ public class ex4 {
 		while(rs.next()) {
 			if(rs.getInt(1)==112) {
 				rs.updateString(2, "Stanley");
-				rs.updateRow();
+//				rs.updateRow();
 			}
 		}
-		rs.absolute(3);
+		rs.absolute(2);
 		System.out.println(rs.getInt(1)+" "+rs.getString(2));
 	
 		} catch (Exception e) {
