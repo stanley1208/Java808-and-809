@@ -9,7 +9,7 @@ public class ex1 {
 
 	public static void main(String[] args) throws IOException {
 		Path source=Paths.get("C:/Users/user/Documents/java/a.txt");
-		Path destination=Paths.get("C:/Users/user/Documents/data");
+		Path destination=Paths.get("C:/Users/user/Documents/java");
 		Files.copy(source, destination);
 	}
 
